@@ -1,0 +1,10 @@
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\bin\Debug\MO32-2_Kulchitskiy_neuronochka.exe.config
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\bin\Debug\MO32-2_Kulchitskiy_neuronochka.exe
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\bin\Debug\MO32-2_Kulchitskiy_neuronochka.pdb
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.csproj.AssemblyReference.cache
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32_2_Kulchitskiy_neuronochka.Properties.Resources.resources
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.csproj.GenerateResource.cache
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.csproj.CoreCompileInputs.cache
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.exe
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.pdb
+Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32_2_Kulchitskiy_neuronochka.FormMain.resources

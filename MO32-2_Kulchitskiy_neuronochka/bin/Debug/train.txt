@@ -1,0 +1,1 @@
+System.Windows.Forms.NumericUpDown, Minimum = 0, Maximum = 9 0 1 0 1 1 0 0 1 0 0 1 0 1 1 1
