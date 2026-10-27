@@ -28,5 +28,11 @@
             output_layer.Recognize(this, null);
         }
 
+        // само обучение
+        public void Train()
+        {
+
+        }
+
     }
 }
