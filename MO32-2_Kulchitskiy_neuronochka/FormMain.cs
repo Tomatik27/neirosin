@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -107,7 +107,7 @@ namespace MO32_2_Kulchitskiy_neuronochka
         private void buttonSaveTrainSample_Click(object sender, EventArgs e)
         {
             string path = AppDomain.CurrentDomain.BaseDirectory + "train.txt";
-            string tmpStr = CorrectAnswer.ToString();
+            string tmpStr = CorrectAnswer.Value.ToString();
 
             for (int i = 0; i < inputPixels.Length; i++)
             {
@@ -120,8 +120,8 @@ namespace MO32_2_Kulchitskiy_neuronochka
 
         private void buttonSaveTestSample_Click(object sender, EventArgs e)
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory + "train.txt";
-            string tmpStr = CorrectAnswer.ToString();
+            string path = AppDomain.CurrentDomain.BaseDirectory + "test.txt";
+            string tmpStr = CorrectAnswer.Value.ToString();
 
             for (int i = 0; i < inputPixels.Length; i++)
             {
@@ -137,5 +137,11 @@ namespace MO32_2_Kulchitskiy_neuronochka
             Recognize();
         }
 
+        private void buttonTrain_Click(object sender, EventArgs e)
+        {
+            network.Train(network);
+
+            MessageBox.Show("Обучение завершено.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

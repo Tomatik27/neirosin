@@ -50,6 +50,7 @@ namespace MO32_2_Kulchitskiy_neuronochka
             this.buttonSaveTestSample = new System.Windows.Forms.Button();
             this.labelOutput = new System.Windows.Forms.Label();
             this.labelProbability = new System.Windows.Forms.Label();
+            this.buttonTrain = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CorrectAnswer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -282,11 +283,22 @@ namespace MO32_2_Kulchitskiy_neuronochka
             this.labelProbability.TabIndex = 20;
             this.labelProbability.Text = "Probability";
             // 
+            // buttonTrain
+            // 
+            this.buttonTrain.Location = new System.Drawing.Point(482, 324);
+            this.buttonTrain.Name = "buttonTrain";
+            this.buttonTrain.Size = new System.Drawing.Size(87, 23);
+            this.buttonTrain.TabIndex = 21;
+            this.buttonTrain.Text = "Обучить";
+            this.buttonTrain.UseVisualStyleBackColor = true;
+            this.buttonTrain.Click += new System.EventHandler(this.buttonTrain_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 363);
+            this.Controls.Add(this.buttonTrain);
             this.Controls.Add(this.labelProbability);
             this.Controls.Add(this.labelOutput);
             this.Controls.Add(this.buttonSaveTestSample);
@@ -339,6 +351,7 @@ namespace MO32_2_Kulchitskiy_neuronochka
         private System.Windows.Forms.Button buttonSaveTestSample;
         private System.Windows.Forms.Label labelOutput;
         private System.Windows.Forms.Label labelProbability;
+        private System.Windows.Forms.Button buttonTrain;
     }
 }
 
