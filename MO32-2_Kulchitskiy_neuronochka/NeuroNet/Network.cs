@@ -29,9 +29,52 @@
         }
 
         // само обучение
-        public void Train()
+        public void Train(Network net)
         {
+            input_layer = new InputLayer(NetworkMode.Train);
 
+            int epoches = 10;        // к-во эпох
+            double tmpSumError;     // сумма ошибок
+            double[] errors;        // вектор сингала ошибки вх слоя
+            double[] temp_gsums1;   // вектор градиента 1 скр слоя
+            double[] temp_gsums2;   // вектор градиента 2 скр слоя
+
+            e_error_avr = new double[epoches];
+
+            for (int k = 0; k < epoches; k++) // перебор эпох
+            {
+                e_error_avr[k] = 0;
+                input_layer.Shuffling_Array_Rows(input_layer.Trainset);
+                for (int i = 0; i < input_layer.Trainset.GetLength(0); i++)
+                {
+                    double[] tmpTrain = new double[15];  // обучабщий образ
+                    for (int j = 0; j < tmpTrain.Length; j++)
+                        tmpTrain[j] = input_layer.Trainset[i, j];
+
+                    ForwardPass(tmpTrain);
+
+                    // вычисление ошибок по итерации
+                    tmpSumError = 0;
+                    errors = new double[fact.Length];
+                    for (int x = 0; x < errors.Length; x++)
+                    {
+                        if (x == input_layer.Trainset[i, 0])
+                            errors[x] = 1.0 - fact[x];
+                        else
+                            errors[x] = 0.0 - net.fact[x];
+
+                        tmpSumError += errors[x] * errors[x] / 2;
+                    }
+                    e_error_avr[k] += tmpSumError / errors.Length; // суммарное значение ошибки k-ой эпохи
+                }
+
+                input_layer = null;
+
+                // запись скорректированных весов в память
+                hidden_layer1.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(hidden_layer1) + "_memory.csv");
+                hidden_layer2.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(hidden_layer2) + "_memory.csv");
+                output_layer.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(output_layer) + "_memory.csv");
+            }
         }
 
     }

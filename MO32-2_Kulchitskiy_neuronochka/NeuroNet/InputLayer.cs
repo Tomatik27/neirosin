@@ -50,5 +50,11 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
 
         }
 
+        // перетасовка строк массива методом Фиишера-Йетса
+        public void Shuffling_Array_Rows(double[,] arr)
+        {
+            int j; // номер случайно выбранной строки
+        }
+
     }
 }

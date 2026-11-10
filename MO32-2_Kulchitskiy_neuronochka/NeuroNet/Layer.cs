@@ -86,7 +86,7 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
                         memory_element = tmpStrWeights[i].Split(delim);
                         for (int j = 0; j < numofprevneurons; j++)
                         {
-                            weights[i, j] = double.Parse(memory_element[j].Replace('.', '.'),
+                            weights[i, j] = double.Parse(memory_element[j].Replace(',', '.'),
                                 System.Globalization.CultureInfo.InvariantCulture);
                         }
                     }
