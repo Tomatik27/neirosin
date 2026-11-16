@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -70,7 +70,6 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
         public double[,] WeightsInitialize(MemoryMode mm, string path)
         {
             char[] delim = new char[] { ';', ' ' };
-            string tmpStr;
             string[] tmpStrWeights;
             double[,] weights = new double[numofneurons, numofprevneurons + 1];
 
@@ -80,11 +79,13 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
                     
                     tmpStrWeights = File.ReadAllLines(path);
                     string[] memory_element;
+                    int rows_in_file = Math.Min(numofneurons, tmpStrWeights.Length);
                     
-                    for (int i = 0; i < numofneurons; i++)
+                    for (int i = 0; i < rows_in_file; i++)
                     {
-                        memory_element = tmpStrWeights[i].Split(delim);
-                        for (int j = 0; j < numofprevneurons; j++)
+                        memory_element = tmpStrWeights[i].Split(delim, StringSplitOptions.RemoveEmptyEntries);
+                        int cols = Math.Min(numofprevneurons + 1, memory_element.Length);
+                        for (int j = 0; j < cols; j++)
                         {
                             weights[i, j] = double.Parse(memory_element[j].Replace(',', '.'),
                                 System.Globalization.CultureInfo.InvariantCulture);
@@ -105,11 +106,11 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
 
                     for (int i = 0; i < numofneurons; i++)
                     {
-                        tmpStr = neurons[i].Weights[0].ToString();
-                        for (int j = 1; j < numofprevneurons; j++)
-                        {
-                            tmpStr += delim[0] + neurons[i].Weights[j].ToString();
-                        }
+                        double[] w = neurons[i].Weights;
+                        string[] parts = new string[w.Length];
+                        for (int j = 0; j < w.Length; j++)
+                            parts[j] = w[j].ToString(System.Globalization.CultureInfo.InvariantCulture);
+                        tmpStrWeights[i] = string.Join(";", parts);
                     }
                     
                     File.WriteAllLines(path, tmpStrWeights);

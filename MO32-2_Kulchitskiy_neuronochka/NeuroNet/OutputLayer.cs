@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +36,7 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
             }
 
             for (int i = 0; i < numofneurons; i++) // цикл коррекции весов
-                for (int n = 0; n < numofprevneurons; n++)
+                for (int n = 0; n < numofprevneurons + 1; n++)
                 {
                     double deltaw;
 

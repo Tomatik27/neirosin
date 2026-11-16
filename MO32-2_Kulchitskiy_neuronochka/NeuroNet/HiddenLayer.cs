@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,20 +29,20 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
                 double sum = 0;
 
                 for (int k = 0; k < numofneurons; k++)
-                    sum += neurons[k].Weights[j + 1] * neurons[k].Derivative * gr_sum[k];
+                    sum += neurons[k].Weights[j + 1] * neurons[k].Derivative * gr_sums[k];
 
                 gr_sum[j] = sum;
             }
 
             for (int i = 0; i < numofneurons; i++) // цикл коррекции весов
-                for (int n = 0; n < numofprevneurons; n++)
+                for (int n = 0; n < numofprevneurons + 1; n++)
                 {
                     double deltaw;
 
                     if (n == 0) // если порог
-                        deltaw = momentum * lastdeltaweights[i, 0] + learningrate * neurons[i].Derivative * gr_sum[i];
+                        deltaw = momentum * lastdeltaweights[i, 0] + learningrate * neurons[i].Derivative * gr_sums[i];
                     else
-                        deltaw = momentum * lastdeltaweights[i, n] + learningrate * neurons[i].Inputs[n - 1] * neurons[i].Derivative * gr_sum[i];
+                        deltaw = momentum * lastdeltaweights[i, n] + learningrate * neurons[i].Inputs[n - 1] * neurons[i].Derivative * gr_sums[i];
 
                     lastdeltaweights[i, n] = deltaw;
                     neurons[i].Weights[n] += deltaw; // коррекция весов

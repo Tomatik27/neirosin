@@ -1,2 +1,6 @@
 .vs/*
+.vscode/*
 .git/*
+
+# файлы ИИ-агента
+AGENTS.md

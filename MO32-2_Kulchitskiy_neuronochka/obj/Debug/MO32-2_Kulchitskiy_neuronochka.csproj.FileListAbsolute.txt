@@ -12,10 +12,12 @@ C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\bin\Debug\MO
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\bin\Debug\MO32-2_Kulchitskiy_neuronochka.exe
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\bin\Debug\MO32-2_Kulchitskiy_neuronochka.pdb
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.csproj.AssemblyReference.cache
-C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.exe.config
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32_2_Kulchitskiy_neuronochka.FormMain.resources
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32_2_Kulchitskiy_neuronochka.Properties.Resources.resources
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.csproj.GenerateResource.cache
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.csproj.CoreCompileInputs.cache
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.exe
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.pdb
+C:\Users\akkul\source\repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akkul\source\repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.sourcelink.json
+C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.exe.config

@@ -1,4 +1,4 @@
-﻿namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
+namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
 {
     class Network
     {
@@ -33,7 +33,7 @@
         {
             input_layer = new InputLayer(NetworkMode.Train);
 
-            int epoches = 10;        // к-во эпох
+            int epoches = 20;        // к-во эпох
             double tmpSumError;     // сумма ошибок
             double[] errors;        // вектор сингала ошибки вх слоя
             double[] temp_gsums1;   // вектор градиента 1 скр слоя
@@ -49,7 +49,7 @@
                 {
                     double[] tmpTrain = new double[15];  // обучабщий образ
                     for (int j = 0; j < tmpTrain.Length; j++)
-                        tmpTrain[j] = input_layer.Trainset[i, j];
+                        tmpTrain[j] = input_layer.Trainset[i, j + 1]; // пиксели без метки цифры
 
                     ForwardPass(tmpTrain);
 
@@ -66,15 +66,20 @@
                         tmpSumError += errors[x] * errors[x] / 2;
                     }
                     e_error_avr[k] += tmpSumError / errors.Length; // суммарное значение ошибки k-ой эпохи
+
+                    // обратное распространение ошибки и коррекция весов
+                    temp_gsums1 = output_layer.BackwardPass(errors);    // градиенты выходного слоя
+                    temp_gsums2 = hidden_layer2.BackwardPass(temp_gsums1);
+                    hidden_layer1.BackwardPass(temp_gsums2);
                 }
-
-                input_layer = null;
-
-                // запись скорректированных весов в память
-                hidden_layer1.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(hidden_layer1) + "_memory.csv");
-                hidden_layer2.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(hidden_layer2) + "_memory.csv");
-                output_layer.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(output_layer) + "_memory.csv");
             }
+
+            input_layer = null;
+
+            // запись скорректированных весов в память
+            hidden_layer1.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(hidden_layer1) + "_memory.csv");
+            hidden_layer2.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(hidden_layer2) + "_memory.csv");
+            output_layer.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(output_layer) + "_memory.csv");
         }
 
     }
