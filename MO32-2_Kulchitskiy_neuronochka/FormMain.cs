@@ -141,6 +141,11 @@ namespace MO32_2_Kulchitskiy_neuronochka
         {
             network.Train(network);
 
+            for (int i = 0; i < network.E_error_avr.Length; i++)
+            {
+                chartEavr.Series[0].Points.AddY(network.E_error_avr[i]);
+            }
+
             MessageBox.Show("Обучение завершено.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
