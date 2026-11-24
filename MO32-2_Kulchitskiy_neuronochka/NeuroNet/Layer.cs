@@ -14,8 +14,8 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
         string pathFileWeights;                         // путь к файлу с весами
         protected int numofneurons;                     // число нейронов
         protected int numofprevneurons;                 // число нейронов предыдущ слоя
-        protected const double learningrate = 0.9;     // скорость обновления 
-        protected const double momentum = 0.1;          // момент
+        internal static double learningrate = 0.9;      // скорость обновления (подобрано: лучшая точность на валидации)
+        internal static double momentum = 0.0;          // момент (подобрано: с моментом > 0.5 сеть расходится)
         protected double[,] lastdeltaweights;           // веса
         protected Neuron[] neurons;                     // массив нейронов
 

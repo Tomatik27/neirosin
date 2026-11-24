@@ -8,19 +8,19 @@
     ".NETFramework,Version=v4.7.2": []
   },
   "packageFolders": {
-    "C:\\Users\\s0195980\\.nuget\\packages\\": {}
+    "C:\\Users\\akkul\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\repos\\MO32-2_Kulchitskiy_neuronochka\\MO32-2_Kulchitskiy_neuronochka\\MO32-2_Kulchitskiy_neuronochka.csproj",
+      "projectUniqueName": "C:\\Users\\akkul\\source\\repos\\neirosin\\MO32-2_Kulchitskiy_neuronochka\\MO32-2_Kulchitskiy_neuronochka.csproj",
       "projectName": "MO32-2_Kulchitskiy_neuronochka",
-      "projectPath": "Z:\\repos\\MO32-2_Kulchitskiy_neuronochka\\MO32-2_Kulchitskiy_neuronochka\\MO32-2_Kulchitskiy_neuronochka.csproj",
-      "packagesPath": "C:\\Users\\s0195980\\.nuget\\packages\\",
-      "outputPath": "Z:\\repos\\MO32-2_Kulchitskiy_neuronochka\\MO32-2_Kulchitskiy_neuronochka\\obj\\",
+      "projectPath": "C:\\Users\\akkul\\source\\repos\\neirosin\\MO32-2_Kulchitskiy_neuronochka\\MO32-2_Kulchitskiy_neuronochka.csproj",
+      "packagesPath": "C:\\Users\\akkul\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\akkul\\source\\repos\\neirosin\\MO32-2_Kulchitskiy_neuronochka\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\s0195980\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\akkul\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,12 +40,18 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net472": {
         "targetAlias": "net472",
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.317\\RuntimeIdentifierGraph.json"
       }
     }
   }

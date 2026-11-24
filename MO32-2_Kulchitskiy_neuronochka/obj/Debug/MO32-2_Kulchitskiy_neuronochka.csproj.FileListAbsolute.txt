@@ -20,5 +20,5 @@ C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO
 C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.pdb
 C:\Users\akkul\source\repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\akkul\source\repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.sourcelink.json
-C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.exe.config
 Z:\repos\MO32-2_Kulchitskiy_neuronochka\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\akkul\Source\Repos\neirosin\MO32-2_Kulchitskiy_neuronochka\obj\Debug\MO32-2_Kulchitskiy_neuronochka.exe.config
