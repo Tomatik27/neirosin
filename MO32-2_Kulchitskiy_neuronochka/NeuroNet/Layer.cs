@@ -121,8 +121,6 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
 
                     Random random = new Random();
 
-                    double tmpRatio; // коэффициент
-                    double tmpShift; // смещение
                     double[] tmpArr = new double[numofprevneurons + 1];
                     tmpStrWeights = new string[numofneurons];
 
