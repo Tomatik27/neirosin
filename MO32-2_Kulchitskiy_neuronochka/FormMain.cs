@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -139,14 +139,16 @@ namespace MO32_2_Kulchitskiy_neuronochka
 
         private void buttonTrain_Click(object sender, EventArgs e)
         {
-            network.Train(network);
+            string memoryDir = network.Train(network);
 
             for (int i = 0; i < network.E_error_avr.Length; i++)
             {
                 chartEavr.Series[0].Points.AddY(network.E_error_avr[i]);
             }
 
-            MessageBox.Show("Обучение завершено.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Обучение завершено.\nНовые веса сохранены в папку " + memoryDir +
+                "\nЧтобы использовать эту модель, переименуйте её в memory",
+                "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void buttonTest_Click(object sender, EventArgs e)

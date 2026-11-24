@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+
 namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
 {
     class Network
@@ -28,8 +31,8 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
             output_layer.Recognize(this, null);
         }
 
-        // само обучение
-        public void Train(Network net)
+        // само обучение; возвращает имя папки, куда сохранены новые веса
+        public string Train(Network net)
         {
             input_layer = new InputLayer(NetworkMode.Train);
 
@@ -76,10 +79,17 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
 
             input_layer = null;
 
-            // запись скорректированных весов в память
-            hidden_layer1.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(hidden_layer1) + "_memory.csv");
-            hidden_layer2.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(hidden_layer2) + "_memory.csv");
-            output_layer.WeightsInitialize(MemoryMode.SET, "memory/" + nameof(output_layer) + "_memory.csv");
+            // запись скорректированных весов в ОТДЕЛЬНУЮ папку memory_<дата-время>,
+            // чтобы не затирать текущую модель в memory\
+            string memoryDir = "memory_" + DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+            string pathDir = AppDomain.CurrentDomain.BaseDirectory + memoryDir + "\\";
+            Directory.CreateDirectory(pathDir);
+
+            hidden_layer1.WeightsInitialize(MemoryMode.SET, pathDir + nameof(hidden_layer1) + "_memory.csv");
+            hidden_layer2.WeightsInitialize(MemoryMode.SET, pathDir + nameof(hidden_layer2) + "_memory.csv");
+            output_layer.WeightsInitialize(MemoryMode.SET, pathDir + nameof(output_layer) + "_memory.csv");
+
+            return memoryDir;
         }
 
 

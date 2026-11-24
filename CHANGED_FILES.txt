@@ -1,0 +1,3 @@
+MO32-2_Kulchitskiy_neuronochka/NeuroNet/Layer.cs
+MO32-2_Kulchitskiy_neuronochka/NeuroNet/Network.cs
+MO32-2_Kulchitskiy_neuronochka/FormMain.cs

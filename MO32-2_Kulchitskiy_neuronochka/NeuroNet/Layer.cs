@@ -98,11 +98,8 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
                     
                     tmpStrWeights = new string[numofneurons];
                     
-                    if (!File.Exists(path))
-                    {
-                        MessageBox.Show("Файл не найден\nпосле нажатия ОК будет создан отсутствующий файл",
-                            "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                    // сохранение может идти в новую папку (memory_<дата-время>) — создаём её
+                    Directory.CreateDirectory(Path.GetDirectoryName(path));
 
                     for (int i = 0; i < numofneurons; i++)
                     {
