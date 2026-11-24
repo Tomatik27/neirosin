@@ -11,7 +11,7 @@ namespace MO32_2_Kulchitskiy_neuronochka.NeuroNet
         private double[,] testset;  // изображения в тестовой выборке
 
         public double[,] Trainset { get => trainset; }
-        public double[,] Testnset { get => testset; }
+        public double[,] Testset { get => testset; }
 
         // конструктор
         public InputLayer(NetworkMode nm)
